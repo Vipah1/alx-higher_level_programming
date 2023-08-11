@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-import string
-__import__('sys').stdout.buffer.write(string.ascii_uppercase + '\n')
+alpha = range('a','z')
+print(alpha.upper)

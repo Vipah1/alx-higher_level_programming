@@ -1,7 +1,12 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import hidden_4
+
+
+def main():
+    for i in dir(hidden_4):
+        if not (i[0] == '_' and i[1] == '_'):
+            print(i)
+
+
 if __name__ == "__main__":
-    mod_name = dir(hidden_4)
-    for name in sorted(mod_name):
-        if not name.startswith("__"):
-            print(name)
+    main()
