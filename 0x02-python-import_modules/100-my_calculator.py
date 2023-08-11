@@ -15,13 +15,13 @@ if __name__ == "__main__":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
     for op in op_list:
-        if op = "+":
+        if op == "+":
             ans = a + b
             print("{} + {} = {}".format(a, b, ans))
-        elif op = "-":
+        elif op == "-":
             ans = a - b
             print("{} - {} = {}".format(a, b, ans))
-        elif op = "*":
+        elif op == "*":
             ans = a * b
             print("{} * {} = {}".format(a, b, ans))
         else:
