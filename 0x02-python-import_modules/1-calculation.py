@@ -5,8 +5,8 @@ if __name__ == "__main__":
     b = 5
     add = calc.add(a, b)
     sub = calc.sub(a, b)
-    mul = calc.sub(a, b)
-    div = calc.sub(a, b)
+    mul = calc.mul(a, b)
+    div = calc.div(a, b)
     print("{} + {} = {}".format(a, b, add))
     print("{} - {} = {}".format(a, b, sub))
     print("{} * {} = {}".format(a, b, mul))
