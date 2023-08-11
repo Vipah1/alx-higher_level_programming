@@ -3,8 +3,8 @@ from sys import argv
 from calculator_1 import add, sub, mul, div
 if __name__ == "__main__":
     op_list = "+-*/"
-    a = int(argv[0])
-    b = int(argv[4])
+    a = int(argv[1])
+    b = int(argv[3])
     op = argv[2]
     count = len(agrv)
     ans = 0
