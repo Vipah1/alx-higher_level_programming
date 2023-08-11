@@ -9,7 +9,7 @@ if __name__ == "__main__":
     count = len(agrv)
     ans = 0
     if count != 4:
-        print("Usage: ./100-my_calculator.py {} {} {}".format(a, op, b))
+        print("Usage: ./100-my_calculator.py <a> <operaor> <b>")
         exit(1)
     if op not in op_list:
         print("Unknown operator. Available operators: +, -, * and /")
