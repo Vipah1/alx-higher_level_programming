@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-alpha = range(a,z)
+alpha = range('a','z')
 print(alpha.upper)
