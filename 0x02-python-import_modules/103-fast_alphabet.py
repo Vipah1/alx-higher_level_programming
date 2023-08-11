@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-alpha = range('a','z')
-print(alpha.upper)
+import string
+print(string.ascii_uppercase)
