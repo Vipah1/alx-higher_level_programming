@@ -3,11 +3,11 @@ import calculator_1 as calc
 if __name__ == "__main__":
     a = 10
     b = 5
-    add = calc.add(a, b)
-    sub = calc.sub(a, b)
-    mul = calc.mul(a, b)
-    div = calc.div(a, b)
-    print("{} + {} = {}".format(a, b, add))
-    print("{} - {} = {}".format(a, b, sub))
-    print("{} * {} = {}".format(a, b, mul))
-    print("{} / {} = {}".format(a, b, div))
+    addi = calc.add(a, b)
+    subi = calc.sub(a, b)
+    muli = calc.mul(a, b)
+    divi = calc.div(a, b)
+    print("{} + {} = {}".format(a, b, addi))
+    print("{} - {} = {}".format(a, b, subi))
+    print("{} * {} = {}".format(a, b, muli))
+    print("{} / {} = {}".format(a, b, divi))
