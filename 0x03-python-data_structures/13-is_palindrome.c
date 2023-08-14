@@ -1,26 +1,116 @@
 #include "lists.h"
-
+int digit_count(int);
 /**
- * is_palindrome - func that checks if a singly-linked list is a palindrome
- * @head: pointer to address of first node on the list
- * Return: 1 if list is a palindrome, otherwise 0
+ * is_palindrome - function checks if a singly linked list is a empty.
+ * @head: head pointer to singly linked list
+ * Return: 0 if it is not a palindrome, 1 if it is a palindrome
+ * Authour: Felix Obianozie
  */
+
 int is_palindrome(listint_t **head)
 {
-  listint_t *temp;
-  int list_len = 0;
+  listint_t *current = *head;
+  int nodes = 0;
+  int limit = 0;
+  int tmp = 1;
+  int i = 0;
+  int j = 0;
 
-  if (!*head)
+  long double value1 = 0;
+  long double value2 = 0;
+
+  /*Empty list is palindrome*/
+  if (*head == NULL)
     return (1);
 
-  temp = *head;
-  while (temp)
+  /*Count nodes*/
+  while (current != NULL)
     {
-      list_len++;
-      temp = temp->next;
+      current = current->next;
+      nodes++;
     }
-  if (list_len % 2 != 0)
-    return (0);
+  current = *head;
+  /*List with one node is palindrome*/
+  if (nodes == 1)
+    return (1);
+  /*Palindrome in an even case*/
+  if (nodes % 2 == 0)
+    {
+      limit = nodes / 2;
+      for (i = 0; i < limit; i++)
+	{
+	  j = 0;
+	  tmp = digit_count(current->n);
+	  while (j < tmp)
+	    {
+	      value1 = value1 * 10;
+	      j++;
+	    }
+	  value1 = value1 + current->n;
+	  current = current->next;
+	}
+      tmp = 1;
+      for (i = 0; current != NULL; i++)
+	{
+	  while (value2 >= 1)
+	    {
+	      value2 = value2 / 10;
+	      if (i > 0)
+		tmp = tmp * 10;
+	    }
+	  value2 = value2 + current->n;
+	  current = current->next;
+	}
+      value2 = value2 * tmp;
+    }
+  /*Palindrome in an odd case*/
+  if (nodes % 2 != 0)
+    {
+      limit = (nodes / 2) + 1;
+      for (i = 0; i < limit; i++)
+	{
+	  j = 0;
+	  tmp = digit_count(current->n);
+	  while (j < tmp)
+	    {
+	      value1 = value1 * 10;
+	      j++;
+	    }
+	  value1 = value1 + current->n;
+	  tmp = current->n;
+	  current = current->next;
+	}
+      value2 = tmp;
+      tmp = 1;
+      for (i = 0; current != NULL; i++)
+	{
+	  while (value2 >= 1)
+	    {
+	      value2 = value2 / 10;
+	      tmp = tmp * 10;
+	    }
+	  value2 = value2 + current->n;
+	  current = current->next;
+	}
+      value2 = value2 * tmp;
+    }
+  if (value1 == value2)
+    return (1);
+  return (0);
+}
 
-  return (1);
+/**
+ * digit_count - Checks number of digits of a given integer.
+ * @value: the supposed integer
+ * Return: number of digits of given integer.
+ */
+int digit_count(int value)
+{
+  int count = 0;
+  while (value >= 1)
+    {
+      value = value / 10;
+      count++;
+    }
+  return (count);
 }
