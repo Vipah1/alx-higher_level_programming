@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Square module"""
 
-class Square:
+class Square():
     """A Square class"""
     pass
