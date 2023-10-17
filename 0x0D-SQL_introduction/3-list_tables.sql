@@ -1,2 +1,2 @@
---this script shows tables
-SHOW TABLES;
+--this script shows tables in a database
+SHOW TABLES
