@@ -1,1 +1,1 @@
-Handling exceptions in python
+Readme for more queries in my sql
